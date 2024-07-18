@@ -161,6 +161,7 @@ return {
         -- pyright = {},
         rust_analyzer = {},
         graphql = {},
+        tsserver = {},
         eslint = {
           settings = {
             eslint = {
