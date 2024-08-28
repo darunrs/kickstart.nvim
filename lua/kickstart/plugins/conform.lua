@@ -40,6 +40,13 @@ return {
         -- is found.
         javascript = { { 'eslint_d' } },
         typescript = { 'eslint_d' },
+        java = { 'google-java-format' },
+        rust = { 'rustfmt' },
+      },
+      formatters = {
+        google_java_format = {
+          prepend_args = { '--aosp' },
+        },
       },
     },
   },

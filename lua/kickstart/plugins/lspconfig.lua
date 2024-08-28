@@ -173,6 +173,17 @@ return {
         rust_analyzer = {},
         graphql = {},
         tsserver = {},
+        jdtls = {
+          java = {
+            format = {
+              enabled = true,
+              settings = { -- you can use your preferred format style
+                url = 'https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml',
+                profile = 'GoogleStyle',
+              },
+            },
+          },
+        },
         eslint = {
           settings = {
             eslint = {
@@ -183,14 +194,6 @@ return {
             },
           },
         },
-        -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-        --
-        -- Some languages (like typescript) have entire language plugins that can be useful:
-        --    https://github.com/pmizio/typescript-tools.nvim
-        --
-        -- But for many setups, the LSP (`tsserver`) will work just fine
-        --
-
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
