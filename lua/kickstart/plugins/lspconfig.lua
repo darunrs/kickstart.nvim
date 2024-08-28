@@ -173,17 +173,7 @@ return {
         rust_analyzer = {},
         graphql = {},
         tsserver = {},
-        jdtls = {
-          java = {
-            format = {
-              enabled = true,
-              settings = { -- you can use your preferred format style
-                url = 'https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml',
-                profile = 'GoogleStyle',
-              },
-            },
-          },
-        },
+        jdtls = {},
         eslint = {
           settings = {
             eslint = {
