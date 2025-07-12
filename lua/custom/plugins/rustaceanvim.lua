@@ -13,10 +13,12 @@ return {
         on_attach = function(_, bufnr)
           -- you can also put keymaps in here
           local map = require('utils').local_map(bufnr)
-          map('go', '<cmd>RustLsp openCargo<CR>', 'Go to cargo.toml')
-          map('<leader>le', '<cmd>RustLsp explainError<CR>', 'Explain error')
-          map('<leader>lr', '<cmd>RustLsp run<CR>', 'Run')
-          map('<leader>lR', '<cmd>RustLsp! run<CR>', 'Rerun latest run')
+          map('go', '<cmd>RustLsp openCargo<CR>', '[Go] to cargo.toml')
+          map('<leader>le', '<cmd>RustLsp explainError<CR>', '[E]xplain error')
+          map('<leader>lp', '<cmd>RustLsp parentModule<CR>', '[P]arent Module')
+          map('<leader>lr', '<cmd>RustLsp run<CR>', '[R]un')
+          map('<leader>lR', '<cmd>RustLsp! run<CR>', '[R]erun latest run')
+          map('<leader>lD', '<cmd>RustLsp relatedDiagnostics<CR>', 'Related [D]iagnostics')
         end,
         settings = {
           -- rust-analyzer language server configuration
