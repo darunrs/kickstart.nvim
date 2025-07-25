@@ -19,6 +19,7 @@ return {
           map('<leader>lr', '<cmd>RustLsp run<CR>', '[R]un')
           map('<leader>lR', '<cmd>RustLsp! run<CR>', '[R]erun latest run')
           map('<leader>lD', '<cmd>RustLsp relatedDiagnostics<CR>', 'Related [D]iagnostics')
+          map('<leader>lc', '<cmd>RustLsp explainError<CR>', '[E]xplain error')
         end,
         settings = {
           -- rust-analyzer language server configuration
@@ -28,11 +29,7 @@ return {
               loadOutDirsFromCheck = true,
               runBuildScripts = true,
             },
-            checkOnSave = { -- Add clippy lints for Rust.
-              allFeatures = true,
-              command = 'clippy',
-              extraArgs = { '--no-deps' },
-            },
+            checkOnSave = true,
             procMacro = {
               enable = true,
               ignored = {
